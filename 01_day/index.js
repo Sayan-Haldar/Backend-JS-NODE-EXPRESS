@@ -15,6 +15,11 @@ app.get('/login',(req,res)=>{
     res.send('<p> Login </p>')
 })
 
+const hello = "Hello GitHub!";
+app.get('/github', (req, res) => {
+    res.json({ a: hello });
+});
+
 app.listen(process.env.PORT,()=>{
-    console.log(`app listining on port ${port}`);
+    console.log(`app listining on port ${process.env.PORT}`);
 })
